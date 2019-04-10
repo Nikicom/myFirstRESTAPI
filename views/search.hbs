@@ -1,0 +1,15 @@
+<h1>Search Engine for My Database</h1>
+<form action="/search" method="post">
+    <input type="text" name="website">
+    <button type="submit" class="btn btn-success">
+        Search Users by Website
+    </button>
+</form>
+
+{{#if users}}
+   <ul>
+   {{#each users}}
+   <li>Name is: {{username}} , website: {{website}} and Salary: {{salary}}</li>
+   {{/each}}
+   </ul>
+{{/if}}
